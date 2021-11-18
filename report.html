@@ -62,12 +62,11 @@
     </div>
     <div class="container mt-2">
         <h6>Position Title</h6>
+        {% for i,title in item.titles %}
         <div class="row">
-                {% for title in item.titles %}
-                <div class="col">{{ title }}</div>
-                {% endfor %}
-            </ul>
+                <div class="col">{{ i }. {{ title }}</div>
         </div>
+        {% endfor %}
 
         <div class="container mt-5 align-bottom">
             <div class="row">
