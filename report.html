@@ -24,7 +24,7 @@
             {% for q in item.related_questions %}
             <div class="row">
                 <div class="col">{{ q }}</div>
-                <div class="col">{{ item.related_questions[loop.index] }}</div>
+                <div class="col text-end">{{ item.related_questions[loop.index] }}</div>
             </div>
             {% endfor %}
         {% elif item.related_questions|length < 1 %}
@@ -45,7 +45,7 @@
             {% for s in item.related_searches %}
             <div class="row">
                 <div class="col">{{ s }}</div>
-                <div class="col">{{ item.related_searches[loop.index] }}</div>
+                <div class="col text-end">{{ item.related_searches[loop.index] }}</div>
             </div>
             {% endfor %}
         {% elif item.related_searches|length < 1 %}
@@ -61,11 +61,10 @@
         {% endif %}
     </div>
     <div class="container mt-2">
+        <h6>Position Title</h6>
         <div class="row">
-            <h6>Position Title</h6>
-            <ul class="list-group list-group-flush">
                 {% for title in item.titles %}
-                <li class="list-group-item">{{ title }}</li>
+                <div class="col">{{ title }}</div>
                 {% endfor %}
             </ul>
         </div>
@@ -80,6 +79,7 @@
                 </div>
             </div>
         </div>
+        <p style="page-break-before: always" ></p>
     </div>
   {% endfor %}
 </body>
