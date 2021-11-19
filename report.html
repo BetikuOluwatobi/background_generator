@@ -8,6 +8,20 @@
 </head>
 
 <body>
+    <div class="container bg-light mt-1">
+        <h3 class="mt-1">Keywords Groups</h3>
+        {% for group,kw in group_dic.items() %}
+        <div class="container bg-light mt-2">
+            <h6>Group {{ group[0] }}|Cumulative Search Requests: {{ group[1] }}</h6>
+                <div class="row">
+                    {% for k in kw %}
+                    <div class="col">{{ k }}</div>
+                    {% endfor %}
+                </div>
+         </div>
+        {% endfor %}
+        <p style="page-break-before: always" ></p>
+    </div>
     {% for keyword,item in key_map.items() %}
     <div class="container">
         <div class="row bg-light">
