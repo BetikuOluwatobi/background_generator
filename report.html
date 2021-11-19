@@ -11,10 +11,10 @@
     <div class="container bg-light mt-1">
         <h3 class="mt-1">Keywords Groups</h3>
         {% for group,kw in group_dic.items() %}
-        <h6>Group {{ group[0] }}|Cumulative Search Requests: {{ group[1] }}</h6>
-        {% for k in kw %}
+        <h6>Group {{ group[0] }} | Cumulative Search Requests: {{ group[1] }}</h6>
+        {% for i,k in enumerate(kw) %}
             <div class="row">
-                <div class="col">{{ k }}</div>
+                <div class="col">{{ i }}. {{ k }}</div>
             </div>
         {% endfor %}
         {% endfor %}
